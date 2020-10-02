@@ -15,8 +15,15 @@ load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMAD
 com = comadre$metadata
 library(dplyr)
 kw = filter(com, SpeciesAccepted == 'Orcinus orca')
+
 ```
 
 
+```{r}
+# Finding which mat values we have:
+grep(pattern = 'Orcinus',x=comadre$metadata$Genus)
+#Viewing the matrices: 1653-1705
+
+```
 
 
