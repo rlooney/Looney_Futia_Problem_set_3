@@ -19,5 +19,11 @@ comadre$mat[[1680]]  # MatrixID: 249552
 ```
 
 
+```{r}
+# Finding which mat values we have:
+grep(pattern = 'Orcinus',x=comadre$metadata$Genus)
+#Viewing the matrices: 1653-1705
+
+```
 
 
