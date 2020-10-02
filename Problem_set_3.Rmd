@@ -7,6 +7,16 @@ output: pdf_document
 
 # This document will be used as our final PDF
 
-# Killer whale
+# Killer whale, Orcinus orca
 
-# Test2
+load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMADRE_v.4.20.9.0.RData")
+
+```{r}
+com = comadre$metadata
+library(dplyr)
+kw = filter(com, SpeciesAccepted == 'Orcinus orca')
+```
+
+
+
+
