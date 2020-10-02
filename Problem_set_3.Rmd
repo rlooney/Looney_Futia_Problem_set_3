@@ -15,6 +15,12 @@ load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMAD
 com = comadre$metadata
 library(dplyr)
 kw = filter(com, SpeciesAccepted == 'Orcinus orca')
+
+comadre$mat[[1653]]  # MatrixID: 249525
+comadre$mat[[1654]]  # MatrixID: 249526
+comadre$mat[[1680]]  # MatrixID: 249552
+
+
 ```
 
 
