@@ -1,13 +1,20 @@
 ---
 title: "Problem_set_3"
-author: "Raymond Looney"
+author: "Raymond Looney and Matt Futia"
 date: "10/2/2020"
 output: pdf_document
 ---
 
-# This document will be used as our final PDF
+This document will be used as our final PDF
 
-# Killer whale, Orcinus orca
+Killer whale, Orcinus orca
+
+**What species (and location if available) did you choose? Why did you choose the species?**
+We selected the Killer whale *Orcinus orca* because we were both interested in marine mammals. I [Matt] personally has an interest in dolphins so we focused our attention on the dolphin family (Delphinidae). Within the dolphin family, we selected the killer whale because it had the most populations (3) allowing additional comparisons.
+
+**What question do you want to answer about this population (e.g. population status, best management strategies)?**
+We are interested in the age-class structure and population status for each of the three populations. We are also curious how these variables compare among populations.
+
 
 ```{r}
 com = comadre$metadata
