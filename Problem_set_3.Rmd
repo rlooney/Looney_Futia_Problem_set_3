@@ -7,7 +7,7 @@ output: pdf_document
 
 
 **What species (and location if available) did you choose? Why did you choose the species?**
-We selected the Killer whale *Orcinus orca* because we were both interested in marine mammals. Matthew personally has an interest in dolphins so we focused our attention on the dolphin family (Delphinidae). Within the dolphin family, we selected the killer whale because it had the most populations (two) allowing additional comparisons. 
+We selected the Killer whale *Orcinus orca* because we were both interested in marine mammals. Raymond has an interest in large mammals and marine ecology has always been an area of interest for him. Matt personally has an interest in dolphins so we focused our attention on the dolphin family (Delphinidae). Within the dolphin family, we selected the killer whale because it had the most populations (two) allowing additional comparisons. 
 
 **What question do you want to answer about this population (e.g. population status, best management strategies)?**
 We are interested in the life history and population status for each of the two populations. We found it interesting that the two populations considered in the dataset are Northern and Southern populations. We are curious to see how life history, fecundicity, population status, and other variables compare between the two populations. Furthermore, it would be of interest to look into management strategies for our species.
