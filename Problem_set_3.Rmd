@@ -5,27 +5,24 @@ date: "10/2/2020"
 output: pdf_document
 ---
 
-This document will be used as our final PDF
-
-Killer whale, Orcinus orca
 
 **What species (and location if available) did you choose? Why did you choose the species?**
-We selected the Killer whale *Orcinus orca* because we were both interested in marine mammals. I [Matt] personally has an interest in dolphins so we focused our attention on the dolphin family (Delphinidae). Within the dolphin family, we selected the killer whale because it had the most populations (two) allowing additional comparisons.
+We selected the Killer whale *Orcinus orca* because we were both interested in marine mammals. Matthew personally has an interest in dolphins so we focused our attention on the dolphin family (Delphinidae). Within the dolphin family, we selected the killer whale because it had the most populations (two) allowing additional comparisons. 
 
 **What question do you want to answer about this population (e.g. population status, best management strategies)?**
-We are interested in the life history and population status for each of the two populations. We are also curious how these variables compare between populations.
+We are interested in the life history and population status for each of the two populations. We found it interesting that the two populations considered in the dataset are Northern and Southern populations. We are curious to see how life history, fecundicity, population status, and other variables compare between the two populations. Furthermore, it would be of interest to look into management strategies for our species.
 
 
 ```{r}
 load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMADRE_v.4.20.9.0.RData")
-com = comadre$metadata
+com <- comadre$metadata
 library(dplyr)
-kw = filter(com, SpeciesAccepted == 'Orcinus orca')
+kw <- filter(com, SpeciesAccepted == 'Orcinus orca')
 
 # Population 1 (average of two separate populations)
 Pop.1 = comadre$mat[[1653]][1]  # MatrixID: 249525
 Mat.1 = matrix(unlist(Pop.1), ncol = 7, byrow = F)
-Pop1_Eigen = eigen(Mat.1, only.values = F)
+Pop1_Eigen = eigen(Mat.1, only.values = F) #0.999 is largest value
 Pop1_Eigen$values[1]
 Pop1_Eigen$vectors[,1]
 Pop1_SA = data.frame(matrix(data = c(1:7, Pop1_Eigen$vectors[,1]),nrow = 7))
@@ -35,7 +32,7 @@ colnames(Pop1_SA) = c("Age class", "Population 1")
 Pop.2 = comadre$mat[[1654]][1]  # MatrixID: 249526
 Mat.2 = matrix(unlist(Pop.2), ncol = 7, byrow = F)
 Pop2_Eigen = eigen(Mat.2, only.values = F)
-Pop2_Eigen$values[1]
+Pop2_Eigen$values[1] #0.990
 Pop2_Eigen$vectors[,1]
 Pop2_SA = data.frame(matrix(data = c(1:7, Pop2_Eigen$vectors[,1]),nrow = 7))
 colnames(Pop2_SA) = c("Age class", "Population 2")
@@ -44,7 +41,7 @@ colnames(Pop2_SA) = c("Age class", "Population 2")
 Pop.3 = comadre$mat[[1680]][1]  # MatrixID: 249552
 Mat.3 = matrix(unlist(Pop.3), ncol = 7, byrow = F)
 Pop3_Eigen = eigen(Mat.3, only.values = F)
-Pop3_Eigen$values[1]
+Pop3_Eigen$values[1] #1.007
 Pop3_Eigen$vectors[,1]
 Pop3_SA = data.frame(matrix(data = c(1:7, Pop3_Eigen$vectors[,1]),nrow = 7))
 colnames(Pop3_SA) = c("Age class", "Population 3")
