@@ -93,3 +93,5 @@ Stability and elasticity for the three populations are shown in figures one and 
 
 **Using the calculations in part (c), or additional calculations, address the question you proposed in part (b).**
 Based on our results, the killer whale has an uncommon life-history in that the oldest individuals no longer contribute offspring to the population. In addition, only two of the seven stage classes (third and fourth) contribute offspring to each of the populations. Lastly, we were able to identify that the southern population is in decline while the northern population is slightly increasing; overall, the total killer whale population (north and south combined) is in decline.
+
+Furthermore, looking at the data we can conclude some basic management strategies that can be implemented by age class. Figure 1 presents the evidence that fecundicity needs to be maintained and the first 3 age classes need to be preserved in order to increase the growth of the population to increase their lambda values. 
