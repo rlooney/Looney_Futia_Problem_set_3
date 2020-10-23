@@ -12,9 +12,13 @@ We selected the Killer whale *Orcinus orca* because we were both interested in m
 **What question do you want to answer about this population (e.g. population status, best management strategies)?**
 We are interested in the life history and population status for each of the two populations. We found it interesting that the two populations considered in the dataset are Northern and Southern populations. We are curious to see how life history, fecundicity, population status, and other variables compare between the two populations. Furthermore, it would be of interest to look into management strategies for our species.
 
+\textcolor{red}{EASTON NOTE: It is cool to have two populations to compare with such signficant differences between them.}
 
-```{r}
-load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMADRE_v.4.20.9.0.RData")
+```{r, tidy=T}
+# EASTON NOTE: It is always better to use "relative" paths to files. I don't have the same folders as you, so the load() command below won't work. It is enough to just load data from whatever folder the .Rmd file is saved in as I do below:
+
+#load("~/Desktop/UVM/UVM Courses/Quant Reasoning/Looney_Futia_Problem_set_3/COMADRE_v.4.20.9.0.RData")
+load("COMADRE_v.4.20.9.0.RData")
 com <- comadre$metadata
 library(dplyr)
 kw <- filter(com, SpeciesAccepted == 'Orcinus orca')
@@ -76,7 +80,7 @@ image2(sens.3, round = 2)
 title("Population 3")
 ```
 
-```{r, out.width='1\\linewidth', fig.asp=0.33, fig.ncol = 3, fig.cap = "Elasticity for fecundity and seven life stages of three killer whale populations. Values and colors represent the proportional changes in the population growth rate ($\\lambda$) corresponding to changes in population parameters (fecundity, growth, and survival). The color scale from white to red represents the degree of elasticity, with red representing greatest elasticity",fig.align = "center"}
+```{r, out.width='1\\linewidth', fig.asp=0.33, fig.ncol = 3, fig.cap = "Elasticity for fecundity and seven life stages of three killer whale populations. Values and colors represent the proportional changes in the population growth rate ($\\lambda$) corresponding to changes in population parameters (fecundity, growth, and survival). The color scale from white to red represents the degree of elasticity, with red representing greatest elasticity. \\label{fig:example_ref}",fig.align = "center"}
 par(mfcol = c(1,3))
 image2(elas.1, round = 2)
 title("Population 1")
@@ -89,9 +93,13 @@ title("Population 3")
 **Calculate eigenvalue, stable age distribution, elasticity, and sensitivity. What does this tell you about the population?**
 The eigenvalues/population growth rates ($\lambda$) for the three populations are `r round(Pop1_Eigen$values[1],3)`, `r round(Pop2_Eigen$values[1],3)`, and `r round(Pop3_Eigen$values[1],3)`, meaning two populations are in decline ($\lambda$ < 1), while the third population is increasing in population size ($\lambda$ > 1). The stable age distribution for each population is shown in Table 1.
 
+\textcolor{red}{EASTON NOTE: Very cool to see the inline code used here to make the writing reproducible and clean.}
+
 Stability and elasticity for the three populations are shown in figures one and two, respectively. Figure 1 shows that the fecundity and first 3 stage classes are most likely to impact the population growth rate ($\lambda$). These results make sense considering the last three stage classes no longer produce offspring (i.e., fecundity = 0), meaning they are unable to further increase the population size. Similarly, the elasticity results demonstrate that the first three stage classes are most likey to influence the population growth rate, particularly the survival rates within the second, third, and fourth year classes.
 
 **Using the calculations in part (c), or additional calculations, address the question you proposed in part (b).**
 Based on our results, the killer whale has an uncommon life-history in that the oldest individuals no longer contribute offspring to the population. In addition, only two of the seven stage classes (third and fourth) contribute offspring to each of the populations. Lastly, we were able to identify that the southern population is in decline while the northern population is slightly increasing; overall, the total killer whale population (north and south combined) is in decline.
 
 Furthermore, looking at the data we can conclude some basic management strategies that can be implemented by age class. Figure 1 presents the evidence that fecundicity needs to be maintained and the first 3 age classes need to be preserved in order to increase the growth of the population to increase their lambda values. 
+
+\textcolor{red}{EASTON NOTE: Very good job overall on this assignment. You presented a very clear question, used the matrix calculations appropriately, and then were able to answer your questions. A side note that if you include text `label{}` in your figure caption, you can then use `ref{}` to reference this figure later. As an example, see the caption in Figure \ref{fig:example_ref}}
